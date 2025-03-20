@@ -15,7 +15,7 @@ This application fetches live **Bitcoin** price data, calculates **Simple Moving
 
 ---
 
-## ⚙️ Setup & Installation
+## Setup & Installation
 
 ### 1️⃣ Clone the Repository
 
@@ -109,41 +109,6 @@ Press `CTRL + C` in the terminal.
 ### 3️⃣ **Trade Logging System**
 
 - Trades are **logged persistently** in `logs/trades.log`, allowing for analysis and backtesting.
-
----
-
-## Running Tests
-
-We use **Jest** for testing. To run tests:
-
-```sh
-npx jest
-```
-
-Example test file: `tests/testCircularBuffer.js`
-
-```js
-const CircularBuffer = require('../utils/circularBuffer')
-
-test('CircularBuffer maintains correct size', () => {
-  const buffer = new CircularBuffer(3)
-  buffer.add(10)
-  buffer.add(20)
-  buffer.add(30)
-  buffer.add(40)
-
-  expect(buffer.buffer.length).toBe(3)
-  expect(buffer.getAverage()).toBe((20 + 30 + 40) / 3)
-})
-```
-
----
-
-## Future Enhancements
-
-- **Multiple Cryptocurrency Support** (e.g., Ethereum, Dogecoin).
-- **Database Logging** instead of a text file.
-- **Web Dashboard** for visualizing trades.
 
 ---
 
